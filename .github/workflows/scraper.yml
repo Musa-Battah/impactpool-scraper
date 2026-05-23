@@ -20,11 +20,19 @@ jobs:
       with:
         python-version: '3.11'
     
+    # Restore cached history file (keeps track of already scraped jobs)
+    - name: Restore scraped history cache
+      uses: actions/cache@v3
+      with:
+        path: scraped_jobs_history.json
+        key: scraped-history-${{ github.run_id }}
+        restore-keys: |
+          scraped-history-
+    
     - name: Install Chrome
       run: |
         sudo apt-get update
         sudo apt-get install -y chromium-browser
-        # Don't create symlink if it already exists
         if [ ! -f /usr/bin/google-chrome ]; then
           sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
         fi
@@ -38,10 +46,16 @@ jobs:
       id: scraper
       run: |
         python v31.py
-        # Find the CSV file
         CSV_FILE=$(ls impactpool_jobs_*.csv 2>/dev/null | head -1)
         echo "CSV_FILE=$CSV_FILE" >> $GITHUB_ENV
         echo "Found CSV: $CSV_FILE"
+    
+    # Save updated history for next run
+    - name: Save scraped history cache
+      uses: actions/cache/save@v3
+      with:
+        path: scraped_jobs_history.json
+        key: scraped-history-${{ github.run_id }}
     
     - name: Upload CSV artifact
       uses: actions/upload-artifact@v4
@@ -64,11 +78,15 @@ jobs:
         body: |
           ✅ Impactpool job scraper completed successfully!
           
-          Run: ${{ github.run_number }}
-          Time: ${{ github.event.schedule || 'Manual' }}
-          CSV: ${{ env.CSV_FILE }}
+          📊 Run Details:
+          - Run Number: ${{ github.run_number }}
+          - Date: $(date +'%Y-%m-%d %H:%M:%S')
+          - CSV File: ${{ env.CSV_FILE }}
           
-          Check artifacts if email doesn't have attachment.
+          📁 CSV file is attached to this email.
+          
+          🔗 Artifact backup:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send failure notification
@@ -79,10 +97,13 @@ jobs:
         server_port: 465
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "❌ Impactpool Scraper FAILED - ${{ github.run_number }}"
+        subject: "❌ Impactpool Scraper FAILED - Run #${{ github.run_number }}"
         to: ${{ secrets.EMAIL_TO }}
         from: Impactpool Scraper <${{ secrets.EMAIL_USERNAME }}>
         body: |
-          ❌ Scraper failed!
+          ❌ The Impactpool job scraper has failed!
           
-          Check logs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          🔍 Check the error log:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          Please investigate immediately.
