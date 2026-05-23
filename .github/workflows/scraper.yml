@@ -1,0 +1,106 @@
+name: Impactpool Job Scraper
+
+# When to run
+on:
+  schedule:
+    # Run daily at 8:00 AM UTC (adjust as needed)
+    - cron: '0 8 * * *'
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+  # Run when you push code (for testing)
+  push:
+    branches: [ main ]
+
+# What the job does
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # Step 1: Get your code
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    # Step 2: Set up Python
+    - name: Setup Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    # Step 3: Install Chrome browser
+    - name: Install Chrome
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y chromium-browser
+        # Create symlink so Chrome is found
+        sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome
+    
+    # Step 4: Install Python packages
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install selenium pandas webdriver-manager
+    
+    # Step 5: Run your scraper
+    - name: Run Impactpool scraper
+      id: scraper
+      run: |
+        python v31.py
+        # Find the CSV file created by your script
+        CSV_FILE=$(ls impactpool_jobs_*.csv 2>/dev/null | head -1)
+        echo "CSV_FILE=$CSV_FILE" >> $GITHUB_ENV
+        echo "Found CSV: $CSV_FILE"
+    
+    # Step 6: Save CSV as artifact (backup in GitHub)
+    - name: Upload CSV artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: scraped-jobs-${{ github.run_id }}
+        path: impactpool_jobs_*.csv
+        retention-days: 30
+    
+    # Step 7: Send email with results
+    - name: Send email report
+      if: success()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: Impactpool Jobs - ${{ env.CSV_FILE }}
+        to: ${{ secrets.EMAIL_TO }}
+        from: Impactpool Scraper <${{ secrets.EMAIL_USERNAME }}>
+        body: |
+          ✅ Impactpool job scraper completed successfully!
+          
+          📊 Run Details:
+          - Run ID: ${{ github.run_id }}
+          - Run Number: ${{ github.run_number }}
+          - Time: ${{ github.event.schedule || 'Manual trigger' }}
+          
+          📁 CSV file is attached to this email.
+          
+          🔗 You can also download from:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        attachments: ${{ env.CSV_FILE }}
+    
+    # Step 8: Send failure alert (if something goes wrong)
+    - name: Send failure notification
+      if: failure()
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: ❌ Impactpool Scraper FAILED
+        to: ${{ secrets.EMAIL_TO }}
+        from: Impactpool Scraper <${{ secrets.EMAIL_USERNAME }}>
+        body: |
+          ❌ The Impactpool job scraper has failed!
+          
+          🔍 Check the error log:
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          Please investigate immediately.
