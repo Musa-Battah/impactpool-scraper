@@ -2,6 +2,8 @@ name: Impactpool Job Scraper
 
 on:
   schedule:
+    # 9 AM Nigerian Time (WAT) = 8 AM UTC
+    # Nigeria doesn't observe DST, so always UTC+1
     - cron: '0 8 * * *'
   workflow_dispatch:
   push:
@@ -11,23 +13,21 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     
+    # Give write permissions to push to repository
+    permissions:
+      contents: write
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        # Fetch full history so we can see previous history file
+        fetch-depth: 0
     
     - name: Setup Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    
-    # Restore cached history file (keeps track of already scraped jobs)
-    - name: Restore scraped history cache
-      uses: actions/cache@v3
-      with:
-        path: scraped_jobs_history.json
-        key: scraped-history-${{ github.run_id }}
-        restore-keys: |
-          scraped-history-
     
     - name: Install Chrome
       run: |
@@ -45,17 +45,25 @@ jobs:
     - name: Run Impactpool scraper
       id: scraper
       run: |
+        # The script will automatically:
+        # 1. Load existing scraped_jobs_history.json from repo
+        # 2. Skip already scraped jobs
+        # 3. Only scrape new jobs
+        # 4. Save updated history
         python v31.py
+        
+        # Get the generated CSV filename
         CSV_FILE=$(ls impactpool_jobs_*.csv 2>/dev/null | head -1)
         echo "CSV_FILE=$CSV_FILE" >> $GITHUB_ENV
         echo "Found CSV: $CSV_FILE"
     
-    # Save updated history for next run
-    - name: Save scraped history cache
-      uses: actions/cache/save@v3
-      with:
-        path: scraped_jobs_history.json
-        key: scraped-history-${{ github.run_id }}
+    - name: Save updated history to repository
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add scraped_jobs_history.json
+        git diff --staged --quiet || git commit -m "Update scraped jobs history - $(date '+%Y-%m-%d %H:%M') [skip ci]"
+        git push
     
     - name: Upload CSV artifact
       uses: actions/upload-artifact@v4
@@ -79,14 +87,14 @@ jobs:
           ✅ Impactpool job scraper completed successfully!
           
           📊 Run Details:
+          - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
-          - Date: $(date +'%Y-%m-%d %H:%M:%S')
           - CSV File: ${{ env.CSV_FILE }}
           
-          📁 CSV file is attached to this email.
+          📁 CSV file is attached.
           
-          🔗 Artifact backup:
-          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          🔗 View history file:
+          https://github.com/${{ github.repository }}/blob/main/scraped_jobs_history.json
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send failure notification
@@ -97,7 +105,7 @@ jobs:
         server_port: 465
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "❌ Impactpool Scraper FAILED - Run #${{ github.run_number }}"
+        subject: "❌ Impactpool Scraper FAILED - $(date +'%Y-%m-%d')"
         to: ${{ secrets.EMAIL_TO }}
         from: Impactpool Scraper <${{ secrets.EMAIL_USERNAME }}>
         body: |
@@ -105,5 +113,3 @@ jobs:
           
           🔍 Check the error log:
           ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          
-          Please investigate immediately.
