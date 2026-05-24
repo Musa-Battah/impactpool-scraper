@@ -21,7 +21,7 @@ jobs:
       with:
         fetch-depth: 0
     
-    - name: Pull latest state
+    - name: Pull latest state and processed IDs
       run: git pull
     
     - name: Setup Python
@@ -59,13 +59,22 @@ jobs:
           echo "⚠️ Found review file: $REVIEW_FILE"
         fi
     
-    # Save state file to Git (preserves 24-hour tracking)
-    - name: Save state to repository
+    # ⭐ Save BOTH state files to Git ⭐
+    - name: Save state and processed IDs to repository
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
+        
+        # Save the 24-hour timer state
         git add job_outputs/last_run_state.json
-        git diff --staged --quiet || git commit -m "Update ReliefWeb scraper state [skip ci]"
+        
+        # Save the processed job IDs (prevents duplicates forever)
+        git add job_outputs/_processed_ids.txt
+        
+        # Commit if there are changes
+        git diff --staged --quiet || git commit -m "Update ReliefWeb state and processed IDs [skip ci]"
+        
+        # Push to repository
         git push
     
     # Upload main CSV (jobs with valid locations)
@@ -86,9 +95,9 @@ jobs:
         path: ${{ env.REVIEW_FILE }}
         retention-days: 30
     
-    # Send email with results
-    - name: Send email report
-      if: success()
+    # ⭐ Send ONLY the main CSV to email (not the review file)
+    - name: Send email with CSV results
+      if: success() && env.CSV_FILE != ''
       uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.gmail.com
@@ -105,24 +114,50 @@ jobs:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
           
-          📁 Attached Files:
-          ${{ env.CSV_FILE != '' && '✅ CSV with valid locations (ready to use)' || '❌ No new jobs with valid locations found' }}
-          ${{ env.REVIEW_FILE != '' && '⚠️ Review file attached (jobs needing manual location check)' || '' }}
+          📁 CSV file with valid Nigerian locations is attached.
           
-          📈 Quick Stats:
-          ${{ env.CSV_FILE != '' && '- New jobs with Nigerian cities: See CSV' || '' }}
-          ${{ env.REVIEW_FILE != '' && '- Jobs needing location review: Check review file' || '' }}
+          📈 Stats:
+          - New jobs found: Check the CSV
+          - All jobs have been filtered for Nigerian cities only
           
-          🔗 View state file (24-hour tracking):
-          https://github.com/${{ github.repository }}/blob/main/job_outputs/last_run_state.json
-          
-          🔗 View all artifacts:
+          🔗 View all artifacts (including review files):
           ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           
           ---
           This is an automated message from GitHub Actions.
           Your scraper runs daily at 10 AM Nigerian time.
-        attachments: ${{ env.CSV_FILE != '' && env.CSV_FILE || '' }} ${{ env.REVIEW_FILE != '' && env.REVIEW_FILE || '' }}
+        attachments: ${{ env.CSV_FILE }}
+    
+    # Send separate email if only review file exists (no valid locations)
+    - name: Send no-results email
+      if: success() && env.CSV_FILE == '' && env.REVIEW_FILE != ''
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "⚠️ ReliefWeb - No Valid Locations Found - $(date +'%Y-%m-%d')"
+        to: ${{ secrets.EMAIL_TO }}
+        from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
+        body: |
+          ⚠️ ReliefWeb scraper ran but found NO jobs with valid Nigerian cities.
+          
+          📊 Run Details:
+          - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
+          - Run Number: ${{ github.run_number }}
+          
+          What happened:
+          - Found jobs, but none had recognizable Nigerian cities
+          - Check the review file in GitHub Actions artifacts
+          
+          🔗 View review file (jobs needing manual location check):
+          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          
+          🔗 View processed IDs (duplicate tracking):
+          https://github.com/${{ github.repository }}/blob/main/job_outputs/_processed_ids.txt
+          
+          You may need to update the NIGERIAN_CITIES list in v13.py.
     
     # Send failure notification
     - name: Send failure notification
@@ -142,13 +177,7 @@ jobs:
           🔍 Check the error log:
           ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           
-          Possible issues to check:
-          - API connection problem (ReliefWeb API down?)
-          - Rate limiting (too many requests?)
-          - Script error (check the logs above)
-          - Missing dependencies (requests library?)
-          
-          📝 Last successful run state:
-          https://github.com/${{ github.repository }}/blob/main/job_outputs/last_run_state.json
-          
-          Please investigate and fix the issue.
+          Possible issues:
+          - API connection problem
+          - Script error
+          - Missing dependencies
