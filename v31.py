@@ -395,8 +395,113 @@ class ImpactpoolScraper:
                     company_info['logo'] = src
         return company_info
     
+    def extract_single_location(self, location_text):
+        """
+        Extract only ONE primary location from location text.
+        Removes 'Remote |', 'Remote /', '|', '/', 'and', '&' and takes the first valid location.
+        """
+        if not location_text:
+            return ""
+        
+        # Clean the text
+        location_text = location_text.strip()
+        
+        # Remove common prefixes like "Location:"
+        location_text = re.sub(r'^Location:\s*', '', location_text, flags=re.IGNORECASE)
+        
+        # List of separators that indicate multiple locations
+        separators = [
+            ' | ', '|',           # Pipe separator
+            ' / ', '/',           # Slash separator
+            ' and ', ' & ',       # And separator
+            ' , ', ', ',         # Comma separator (but careful with city, country)
+            ' - ', ' -', '- ',    # Dash separator
+            ' + ',               # Plus separator
+            'Remote |', 'Remote|', 'Remote /', 'Remote/', 'Remote',  # Remote prefixes
+            'Virtual |', 'Virtual|', 'Virtual /', 'Virtual/', 'Virtual',
+            'Hybrid |', 'Hybrid|', 'Hybrid /', 'Hybrid/',
+        ]
+        
+        # Check for and remove "Remote |" or "Remote /" patterns specifically
+        remote_patterns = [
+            r'^Remote\s*[|/]\s*',      # "Remote | " or "Remote / "
+            r'^Remote\s+',              # "Remote "
+            r'\s+[|/]\s+',              # " | " or " / "
+        ]
+        
+        for pattern in remote_patterns:
+            location_text = re.sub(pattern, '', location_text, flags=re.IGNORECASE)
+        
+        # Split by common separators and take the first part
+        for sep in separators:
+            if sep in location_text:
+                parts = location_text.split(sep)
+                # Find the first part that looks like a valid location (not empty and not too short)
+                for part in parts:
+                    part = part.strip()
+                    if part and len(part) > 2:
+                        # Check if this part looks like a city/place (not a country code or single word)
+                        if re.match(r'^[A-Za-z\s\-]+$', part):
+                            location_text = part
+                            break
+                break
+        
+        # Handle comma-separated locations (e.g., "Abuja, Nigeria" -> "Abuja")
+        # But only if the first part looks like a specific city
+        if ',' in location_text:
+            parts = [p.strip() for p in location_text.split(',')]
+            # Common country names to check
+            countries = ['Nigeria', 'Ghana', 'Kenya', 'Senegal', 'Mali', 'Niger', 'Chad', 
+                        'Cameroon', 'Benin', 'Togo', 'Burkina', 'Ivory Coast', 'Congo',
+                        'Ethiopia', 'Uganda', 'Tanzania', 'Rwanda', 'Burundi', 'South Africa']
+            
+            # If first part is likely a city (short, not a country) and second part is a country
+            if len(parts) >= 2:
+                first_part = parts[0]
+                second_part = parts[1] if len(parts) > 1 else ""
+                
+                # Check if second part looks like a country
+                is_country = False
+                for country in countries:
+                    if country.lower() in second_part.lower():
+                        is_country = True
+                        break
+                
+                # If first part is plausible as a primary location
+                if first_part and len(first_part) > 2 and len(first_part) < 40:
+                    if is_country or len(parts) == 2:
+                        location_text = first_part
+        
+        # Clean up any remaining artifacts
+        location_text = re.sub(r'^\s*[,|/-]+\s*', '', location_text)
+        location_text = re.sub(r'\s*[,|/-]+\s*$', '', location_text)
+        
+        # Remove any remaining special characters
+        location_text = re.sub(r'[^\w\s\-]', '', location_text)
+        
+        # Trim whitespace
+        location_text = location_text.strip()
+        
+        # If we ended up with multiple words that look like a full address, try to take just the city
+        if ' ' in location_text and len(location_text.split()) > 2:
+            # Look for common city names in Nigeria
+            nigerian_cities = ['Abuja', 'Lagos', 'Kano', 'Ibadan', 'Kaduna', 'Port Harcourt', 
+                              'Maiduguri', 'Benin City', 'Enugu', 'Jos', 'Sokoto', 'Katsina',
+                              'Gombe', 'Yola', 'Damaturu', 'Calabar', 'Oyo', 'Ilorin', 'Abeokuta']
+            for city in nigerian_cities:
+                if city.lower() in location_text.lower():
+                    location_text = city
+                    break
+        
+        # Final validation
+        if location_text and len(location_text) > 2 and len(location_text) < 60:
+            logger.debug(f"Extracted single location: {location_text}")
+            return location_text
+        
+        return ""
+    
     def extract_location(self):
-        """Extract ONLY the primary job location - first valid location found only"""
+        """Extract ONLY the primary job location - single location only"""
         try:
             # Find all metadata spans
             meta_spans = self.driver.find_elements(By.CSS_SELECTOR, 
@@ -411,52 +516,25 @@ class ImpactpoolScraper:
                     # Check if this looks like a location (contains city names, countries, or commas)
                     location_keywords = ['Abuja', 'Lagos', 'Kano', 'Kaduna', 'Port Harcourt', 'Ibadan', 
                                         'Maiduguri', 'Sokoto', 'Katsina', 'Gombe', 'Jos', 'Lokoja', 
-                                        'Abakaliki', 'Osogbo', 'Yola', 'Damaturu', 'Calabar', 'Enugu',
+                                        'Abakaliki', 'Osogbo', 'Yola', 'Damaturu', 'Calabar', 'Enugu', 'Oyo',
                                         'Nairobi', 'Accra', 'Dakar', 'Banjul', 'Bamako', 'Ouagadougou',
                                         'Niamey', "N'Djamena", 'Yaounde', 'Douala', 'Cotonou', 'Lome',
                                         'Nigeria', 'Ghana', 'Kenya', 'Senegal', 'Mali', 'Burkina Faso',
                                         'Niger', 'Chad', 'Cameroon', 'Benin', 'Togo', 'Remote', 'Virtual']
                     
-                    # Check for comma separated locations - take only the first one
-                    if ',' in text:
-                        parts = [p.strip() for p in text.split(',')]
-                        # If first part looks like a city, use it
-                        if len(parts) >= 2 and len(parts[0]) > 2 and len(parts[0]) < 50:
-                            # Return only the primary location (first part)
-                            primary_location = parts[0]
-                            if len(primary_location) > 2:
-                                logger.debug(f"Found primary location from comma-separated: {primary_location}")
-                                return self.clean_text(primary_location)
-                    
-                    # Check for multiple locations separated by " / " or " | " or " and "
-                    separators = [' / ', ' | ', ' and ', ' & ']
-                    for sep in separators:
-                        if sep in text:
-                            # Take only the first location
-                            primary_location = text.split(sep)[0].strip()
-                            if len(primary_location) > 2:
-                                logger.debug(f"Found primary location from separator: {primary_location}")
-                                return self.clean_text(primary_location)
-                    
-                    # Check if this matches any location keyword
+                    # If this text contains location indicators
                     for keyword in location_keywords:
                         if keyword.lower() in text.lower():
-                            # If the text contains multiple keywords, extract just the first one
-                            words = text.split()
-                            for word in words:
-                                if keyword.lower() in word.lower():
-                                    # Clean up the keyword (remove punctuation)
-                                    clean_keyword = re.sub(r'[^\w\s-]', '', word)
-                                    if clean_keyword:
-                                        logger.debug(f"Found primary location from keyword: {clean_keyword}")
-                                        return self.clean_text(clean_keyword)
-                            
-                            # If we can't extract specific keyword, clean the whole text but keep it short
-                            if len(text) < 60:
-                                # Clean the text - remove multiple location indicators
-                                for sep in separators:
-                                    text = text.split(sep)[0].strip()
-                                return self.clean_text(text)
+                            # Extract single location from this text
+                            single_location = self.extract_single_location(text)
+                            if single_location:
+                                return single_location
+                    
+                    # Also try to extract even without keyword match
+                    single_location = self.extract_single_location(text)
+                    if single_location:
+                        return single_location
+        
         except Exception as e:
             logger.debug(f"Error extracting location: {e}")
         
@@ -464,27 +542,16 @@ class ImpactpoolScraper:
         location_element = self.find_element_with_selectors(SELECTORS['location'])
         if location_element:
             location = self.get_text(location_element)
-            if location and len(location) > 3:
-                # Clean the location text
-                location = re.sub(r'Location:?\s*', '', location, flags=re.IGNORECASE).strip()
-                
-                # Take only the first location if multiple are present
-                separators = [' / ', ' | ', ' and ', ' & ', ', ']
-                for sep in separators:
-                    if sep in location:
-                        location = location.split(sep)[0].strip()
-                        break
-                
-                # Clean up and return
-                if location:
-                    logger.debug(f"Found primary location from selector: {location}")
-                    return self.clean_text(location)
+            if location:
+                single_location = self.extract_single_location(location)
+                if single_location:
+                    return single_location
         
         # Fallback: try regex patterns
         try:
             page_text = self.driver.page_source[:5000]  # Only check first 5000 chars
             location_patterns = [
-                r'Location[:\s]+([^,\n<;]+)',  # Get first part before comma
+                r'Location[:\s]+([^,\n<;]+)',
                 r'Duty Station[:\s]+([^,\n<;]+)',
                 r'based in ([^,\n<.;]+)'
             ]
@@ -492,11 +559,9 @@ class ImpactpoolScraper:
                 match = re.search(pattern, page_text, re.IGNORECASE)
                 if match:
                     location = match.group(1).strip()
-                    # Clean up - remove trailing prepositions
-                    location = re.sub(r'\s+(?:and|or|&)$', '', location)
-                    if location and len(location) > 2 and len(location) < 60:
-                        logger.debug(f"Found primary location from regex: {location}")
-                        return self.clean_text(location)
+                    single_location = self.extract_single_location(location)
+                    if single_location:
+                        return single_location
         except Exception as e:
             logger.debug(f"Error in regex location extraction: {e}")
         
@@ -1091,9 +1156,6 @@ def main():
                 for job in jobs_data:
                     loc = job.get('job_location', 'Unknown')
                     if loc:
-                        # Take only first location if multiple
-                        if ',' in loc:
-                            loc = loc.split(',')[0].strip()
                         location_counts[loc] = location_counts.get(loc, 0) + 1
                 
                 for loc, count in list(location_counts.items())[:10]:  # Show top 10 locations
