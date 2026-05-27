@@ -361,5 +361,71 @@
       "location": "Abuja",
       "category": "Finance"
     }
+  },
+  "https://www.impactpool.org/jobs/1215907": {
+    "title": "Senior Programme Associate, G-7, TA (364 days), #137309, Abuja, Nigeria- WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1215907",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T09:53:41.225066",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1216182": {
+    "title": "Driver and Logistics Assistant, ESGBV (Abuja, Oyo, Kaduna & Benue) at IDEA - International Institute for Democracy and Electoral Assistance",
+    "url": "https://www.impactpool.org/jobs/1216182",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T09:58:17.341632",
+    "scraped_data": {
+      "company": "IDEA - International Institute for Democracy and Electoral Assistance",
+      "location": "Oyo",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1215927": {
+    "title": "Chief of Party at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1215927",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T09:59:59.102368",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Management"
+    }
+  },
+  "https://www.impactpool.org/jobs/1215905": {
+    "title": "National data consultant for Nigeria, Abuja, 12 months (Nationals only), Office-based, #593304 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1215905",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T10:07:27.611514",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1215598": {
+    "title": "Consultant – Industrial Feasibility for Tom Brown Reformulation at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1215598",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T10:23:39.041390",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Remote | Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1215596": {
+    "title": "Consultant – Nutrition Formulation for MAM Treatment Blend at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1215596",
+    "date": "2026-05-27",
+    "timestamp": "2026-05-27T10:34:03.711400",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Remote | Maiduguri",
+      "category": "Healthcare"
+    }
   }
 }
