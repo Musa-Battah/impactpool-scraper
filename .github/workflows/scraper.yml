@@ -3,7 +3,6 @@ name: Impactpool Job Scraper
 on:
   schedule:
     # 9 AM Nigerian Time (WAT) = 8 AM UTC
-    # Nigeria doesn't observe DST, so always UTC+1
     - cron: '0 8 * * *'
   workflow_dispatch:
   push:
@@ -13,7 +12,6 @@ jobs:
   scrape:
     runs-on: ubuntu-latest
     
-    # Give write permissions to push to repository
     permissions:
       contents: write
     
@@ -21,8 +19,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        # Fetch full history so we can see previous history file
         fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Pull latest changes
+      run: git pull --rebase
     
     - name: Setup Python
       uses: actions/setup-python@v5
@@ -45,11 +46,6 @@ jobs:
     - name: Run Impactpool scraper
       id: scraper
       run: |
-        # The script will automatically:
-        # 1. Load existing scraped_jobs_history.json from repo
-        # 2. Skip already scraped jobs
-        # 3. Only scrape new jobs
-        # 4. Save updated history
         python v31.py
         
         # Get the generated CSV filename
@@ -60,10 +56,32 @@ jobs:
     - name: Save updated history to repository
       run: |
         git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
+        git config.user email "actions@github.com"
+        
         git add scraped_jobs_history.json
+        
         git diff --staged --quiet || git commit -m "Update scraped jobs history - $(date '+%Y-%m-%d %H:%M') [skip ci]"
-        git push
+        
+        # Pull latest changes before push
+        git pull --rebase
+        
+        # Push with retry
+        for attempt in 1 2 3; do
+          echo "Push attempt $attempt..."
+          if git push; then
+            echo "✅ Push succeeded on attempt $attempt"
+            break
+          else
+            echo "⚠️ Push failed (attempt $attempt), waiting 5 seconds..."
+            sleep 5
+            git pull --rebase
+          fi
+          
+          if [ $attempt -eq 3 ]; then
+            echo "❌ Push failed after 3 attempts"
+            exit 1
+          fi
+        done
     
     - name: Upload CSV artifact
       uses: actions/upload-artifact@v4
@@ -73,7 +91,7 @@ jobs:
         retention-days: 30
     
     - name: Send email report
-      if: success()
+      if: success() && env.CSV_FILE != ''
       uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.gmail.com
@@ -96,6 +114,26 @@ jobs:
           🔗 View history file:
           https://github.com/${{ github.repository }}/blob/main/scraped_jobs_history.json
         attachments: ${{ env.CSV_FILE }}
+    
+    - name: Send no-results email
+      if: success() && env.CSV_FILE == ''
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: "📭 Impactpool - No New Jobs - $(date +'%Y-%m-%d')"
+        to: ${{ secrets.EMAIL_TO }}
+        from: Impactpool Scraper <${{ secrets.EMAIL_USERNAME }}>
+        body: |
+          📭 Impactpool scraper ran but found NO new jobs.
+          
+          📊 Run Details:
+          - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
+          - Run Number: ${{ github.run_number }}
+          
+          This is normal. The scraper will check again tomorrow.
     
     - name: Send failure notification
       if: failure()
