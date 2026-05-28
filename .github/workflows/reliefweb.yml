@@ -43,7 +43,6 @@ jobs:
       run: |
         python v13.py
         
-        # Find generated CSV files
         CSV_FILE=$(ls job_outputs/nigeria_jobs_*.csv 2>/dev/null | head -1)
         REVIEW_FILE=$(ls job_outputs/nigeria_jobs_review_needed_*.csv 2>/dev/null | head -1)
         
@@ -70,10 +69,8 @@ jobs:
         
         git diff --staged --quiet || git commit -m "Update ReliefWeb state and processed IDs [skip ci]"
         
-        # Pull latest changes before push
         git pull --rebase
         
-        # Push with retry
         for attempt in 1 2 3; do
           echo "Push attempt $attempt..."
           if git push; then
@@ -126,13 +123,6 @@ jobs:
           - Run Number: ${{ github.run_number }}
           
           📁 CSV file with valid Nigerian locations is attached.
-          
-          📈 Stats:
-          - New jobs found: Check the CSV
-          - All jobs have been filtered for Nigerian cities only
-          
-          🔗 View all artifacts (including review files):
-          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send no-results email
@@ -153,17 +143,7 @@ jobs:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
           
-          What happened:
-          - Found jobs, but none had recognizable Nigerian cities
-          - Check the review file in GitHub Actions artifacts
-          
-          🔗 View review file (jobs needing manual location check):
-          ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          
-          🔗 View processed IDs (duplicate tracking):
-          https://github.com/${{ github.repository }}/blob/main/job_outputs/_processed_ids.txt
-          
-          You may need to update the NIGERIAN_CITIES list in v13.py.
+          Check the review file in GitHub Actions artifacts.
     
     - name: Send no-jobs-at-all email
       if: success() && env.CSV_FILE == '' && env.REVIEW_FILE == ''
@@ -201,8 +181,3 @@ jobs:
           
           🔍 Check the error log:
           ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          
-          Possible issues:
-          - API connection problem
-          - Script error
-          - Missing dependencies
