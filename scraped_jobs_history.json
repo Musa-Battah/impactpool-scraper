@@ -427,5 +427,16 @@
       "location": "Remote | Maiduguri",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1216274": {
+    "title": "Principal Banker, SME F&D at EBRD - European Bank for Reconstruction and Development",
+    "url": "https://www.impactpool.org/jobs/1216274",
+    "date": "2026-05-28",
+    "timestamp": "2026-05-28T12:43:06.476171",
+    "scraped_data": {
+      "company": "EBRD - European Bank for Reconstruction and Development",
+      "location": "Abuja",
+      "category": "Finance"
+    }
   }
 }
