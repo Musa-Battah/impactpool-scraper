@@ -460,5 +460,27 @@
       "location": "Abuja",
       "category": "Administration"
     }
+  },
+  "https://www.impactpool.org/jobs/1217025": {
+    "title": "People and Culture Associate, Emergency Unit at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1217025",
+    "date": "2026-06-02",
+    "timestamp": "2026-06-02T12:23:20.575477",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1216930": {
+    "title": "Re-advertisement: Supply & Logistics Officer, NO-2, TA (364 days), #136423, Abuja, Nigeria- WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1216930",
+    "date": "2026-06-02",
+    "timestamp": "2026-06-02T12:38:51.698374",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
