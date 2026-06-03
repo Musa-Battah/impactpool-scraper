@@ -482,5 +482,49 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1217055": {
+    "title": "Technical Supervisor- WASH Infrastructure at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1217055",
+    "date": "2026-06-03",
+    "timestamp": "2026-06-03T12:56:24.233955",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Damaturu",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217100": {
+    "title": "Migration Health Nurse Consultant at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1217100",
+    "date": "2026-06-03",
+    "timestamp": "2026-06-03T13:06:36.224038",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217122": {
+    "title": "WASH Technical Officer - National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1217122",
+    "date": "2026-06-03",
+    "timestamp": "2026-06-03T13:11:53.542515",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Katsina",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217207": {
+    "title": "National Consultant - on the Implementation of the Integrated Birth Registration Ecosystem, Child Protection, Abuja, Nigeria, 12 months, remote+travel at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1217207",
+    "date": "2026-06-03",
+    "timestamp": "2026-06-03T13:18:32.535969",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
