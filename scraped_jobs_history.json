@@ -526,5 +526,38 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1217468": {
+    "title": "Health Specialist, NO-3, TA (364 days), #137358, Abuja, Nigeria- WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1217468",
+    "date": "2026-06-04",
+    "timestamp": "2026-06-04T11:57:29.642937",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217493": {
+    "title": "Infrastructure / Technical Supervisor – Shelter at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1217493",
+    "date": "2026-06-04",
+    "timestamp": "2026-06-04T12:29:45.881675",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Damaturu",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217494": {
+    "title": "Infrastructure / Technical Supervisor – Shelter at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1217494",
+    "date": "2026-06-04",
+    "timestamp": "2026-06-04T12:50:53.267795",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Yola",
+      "category": "Technology"
+    }
   }
 }
