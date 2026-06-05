@@ -559,5 +559,71 @@
       "location": "Yola",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1217750": {
+    "title": "Safety and Security Officer at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1217750",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:34:58.123521",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Sokoto",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217559": {
+    "title": "Operations Assistant_ Field Support - Kano (Temporary) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1217559",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:42:29.088762",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Kano",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217546": {
+    "title": "Programme Officer, Disability Inclusion at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1217546",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:44:10.548078",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Sokoto",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217558": {
+    "title": "Project Assistant (AVM) - Lagos & Kano (Temporary) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1217558",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:45:53.713498",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Kano",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217557": {
+    "title": "Project Assistant (PxD/AVRR) - Lagos, Abuja, Benin city & Kano (Temporary) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1217557",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:47:36.959273",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Benin City",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1217545": {
+    "title": "Programme Officer, WASH at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1217545",
+    "date": "2026-06-05",
+    "timestamp": "2026-06-05T11:49:18.668329",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Sokoto",
+      "category": "Healthcare"
+    }
   }
 }
