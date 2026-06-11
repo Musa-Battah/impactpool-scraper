@@ -658,5 +658,38 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1218933": {
+    "title": "Project Manager - IP3 at ICMPD - International Centre for Migration Policy Development",
+    "url": "https://www.impactpool.org/jobs/1218933",
+    "date": "2026-06-11",
+    "timestamp": "2026-06-11T12:38:32.651088",
+    "scraped_data": {
+      "company": "ICMPD - International Centre for Migration Policy Development",
+      "location": "Abuja",
+      "category": "Management"
+    }
+  },
+  "https://www.impactpool.org/jobs/1218762": {
+    "title": "Education Officer, NO-2, TA (364 days), #137323, Maiduguri (Borno), Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1218762",
+    "date": "2026-06-11",
+    "timestamp": "2026-06-11T12:56:02.278379",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Borno",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1218760": {
+    "title": "Illustration and Graphic Design Consultant, Adolescent Girls Storybook, Gender and ADAP section, Abuja, (Nigeria) 2 months, Remote Req 593622 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1218760",
+    "date": "2026-06-11",
+    "timestamp": "2026-06-11T13:20:52.380161",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
