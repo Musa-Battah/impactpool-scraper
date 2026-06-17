@@ -702,5 +702,27 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1219741": {
+    "title": "Staff Health Officer 1 (800233) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1219741",
+    "date": "2026-06-17",
+    "timestamp": "2026-06-17T12:52:12.501847",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Maiduguri",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1219825": {
+    "title": "Operations Officer (NO-2), FT, #123457, Sokoto - Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1219825",
+    "date": "2026-06-17",
+    "timestamp": "2026-06-17T13:28:16.552554",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
