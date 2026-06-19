@@ -724,5 +724,38 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1220437": {
+    "title": "Driver, G2, FT, #063712, Kaduna, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1220437",
+    "date": "2026-06-19",
+    "timestamp": "2026-06-19T12:14:13.385146",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kaduna",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1220442": {
+    "title": "Senior Driver, G3, FT, #020136, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1220442",
+    "date": "2026-06-19",
+    "timestamp": "2026-06-19T12:39:06.507489",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1220513": {
+    "title": "Risk Analyst - Social and Environmental Standards at UNV - United Nations Volunteers",
+    "url": "https://www.impactpool.org/jobs/1220513",
+    "date": "2026-06-19",
+    "timestamp": "2026-06-19T13:26:40.867970",
+    "scraped_data": {
+      "company": "UNV - United Nations Volunteers",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
