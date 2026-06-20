@@ -757,5 +757,27 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1220635": {
+    "title": "National Migration Health Physician (NOB) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1220635",
+    "date": "2026-06-20",
+    "timestamp": "2026-06-20T10:44:47.247079",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1220724": {
+    "title": "WASH Manager (P-4), TA, #137625, Nigeria, Abuja - Nigeria at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1220724",
+    "date": "2026-06-20",
+    "timestamp": "2026-06-20T11:56:13.454801",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
   }
 }
