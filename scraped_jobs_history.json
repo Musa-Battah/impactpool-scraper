@@ -779,5 +779,27 @@
       "location": "Abuja",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1221144": {
+    "title": "Deputy Director of Programs at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1221144",
+    "date": "2026-06-22",
+    "timestamp": "2026-06-22T13:42:09.080955",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1221208": {
+    "title": "Senior Projects Coordinator at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1221208",
+    "date": "2026-06-22",
+    "timestamp": "2026-06-22T14:10:31.108935",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
   }
 }
