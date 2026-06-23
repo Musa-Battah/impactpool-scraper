@@ -801,5 +801,49 @@
       "location": "Maiduguri",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1221409": {
+    "title": "WASH Officer - National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1221409",
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T11:53:16.640221",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1221410": {
+    "title": "Health Manager - National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1221410",
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T12:04:21.361597",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1221403": {
+    "title": "District Lead - TB at CHAI - Clinton Health Access Initiative",
+    "url": "https://www.impactpool.org/jobs/1221403",
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T12:14:43.100905",
+    "scraped_data": {
+      "company": "CHAI - Clinton Health Access Initiative",
+      "location": "Gaya",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1216713": {
+    "title": "Research consultant on corruption and tax policies in Africa (m/f/d) at Transparency International",
+    "url": "https://www.impactpool.org/jobs/1216713",
+    "date": "2026-06-23",
+    "timestamp": "2026-06-23T12:28:41.203021",
+    "scraped_data": {
+      "company": "Transparency International",
+      "location": "Abuja",
+      "category": "Consultancy"
+    }
   }
 }
