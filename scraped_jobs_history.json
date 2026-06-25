@@ -845,5 +845,16 @@
       "location": "Abuja",
       "category": "Consultancy"
     }
+  },
+  "https://www.impactpool.org/jobs/1221992": {
+    "title": "Hygiene Promotion Assistant - National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1221992",
+    "date": "2026-06-25",
+    "timestamp": "2026-06-25T11:19:24.702326",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
