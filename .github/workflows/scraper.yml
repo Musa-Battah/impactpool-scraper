@@ -48,6 +48,7 @@ jobs:
       run: |
         python v31.py
         
+        # Get the generated CSV filename
         CSV_FILE=$(ls impactpool_jobs_*.csv 2>/dev/null | head -1)
         echo "CSV_FILE=$CSV_FILE" >> $GITHUB_ENV
         echo "Found CSV: $CSV_FILE"
@@ -80,6 +81,33 @@ jobs:
           fi
         done
     
+    # ⭐ NEW: Send CSV to WordPress
+    - name: Send CSV to WordPress
+      if: env.CSV_FILE != ''
+      run: |
+        WP_URL="https://oakjobs.online"
+        echo "📤 Sending Impactpool CSV to WordPress..."
+        
+        RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+          "$WP_URL/wp-json/csv/v1/import" \
+          -H "Content-Type: text/csv" \
+          -H "X-API-Key: ${{ secrets.WP_API_KEY }}" \
+          --data-binary "@${{ env.CSV_FILE }}" \
+          --max-time 60)
+        
+        HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+        BODY=$(echo "$RESPONSE" | sed '$d')
+        
+        echo "HTTP Status: $HTTP_CODE"
+        echo "Response: $BODY"
+        
+        if [ "$HTTP_CODE" = "200" ]; then
+          echo "✅ Impactpool CSV successfully sent to WordPress!"
+        else
+          echo "⚠️ Warning: WordPress returned HTTP $HTTP_CODE"
+          echo "Response body: $BODY"
+        fi
+    
     - name: Upload CSV artifact
       uses: actions/upload-artifact@v4
       with:
@@ -107,6 +135,8 @@ jobs:
           - CSV File: ${{ env.CSV_FILE }}
           
           📁 CSV file is attached.
+          
+          🔄 CSV also sent to WordPress: https://oakjobs.online
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send no-results email
