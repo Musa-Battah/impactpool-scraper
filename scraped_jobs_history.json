@@ -867,5 +867,27 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1222500": {
+    "title": "Nutrition Officer (NO-2), TA, #137743, Sokoto, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1222500",
+    "date": "2026-06-27",
+    "timestamp": "2026-06-27T10:15:59.914687",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1222499": {
+    "title": "Project Manager (P-3), TA (364 days), #137573, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1222499",
+    "date": "2026-06-27",
+    "timestamp": "2026-06-27T10:17:41.422521",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kano",
+      "category": "Technology"
+    }
   }
 }
