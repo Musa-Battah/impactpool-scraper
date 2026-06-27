@@ -43,6 +43,7 @@ jobs:
       run: |
         python v13.py
         
+        # Find generated CSV files
         CSV_FILE=$(ls job_outputs/nigeria_jobs_*.csv 2>/dev/null | head -1)
         REVIEW_FILE=$(ls job_outputs/nigeria_jobs_review_needed_*.csv 2>/dev/null | head -1)
         
@@ -88,6 +89,46 @@ jobs:
           fi
         done
     
+    # ⭐ NEW: Send CSV to WordPress
+    - name: Send CSV to WordPress
+      if: env.CSV_FILE != ''
+      run: |
+        WP_URL="https://oakjobs.online"
+        echo "📤 Sending ReliefWeb CSV to WordPress..."
+        
+        RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+          "$WP_URL/wp-json/csv/v1/import" \
+          -H "Content-Type: text/csv" \
+          -H "X-API-Key: ${{ secrets.WP_API_KEY }}" \
+          --data-binary "@${{ env.CSV_FILE }}" \
+          --max-time 60)
+        
+        HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+        BODY=$(echo "$RESPONSE" | sed '$d')
+        
+        echo "HTTP Status: $HTTP_CODE"
+        echo "Response: $BODY"
+        
+        if [ "$HTTP_CODE" = "200" ]; then
+          echo "✅ ReliefWeb CSV successfully sent to WordPress!"
+        else
+          echo "⚠️ Warning: WordPress returned HTTP $HTTP_CODE"
+          echo "Response body: $BODY"
+        fi
+    
+    # Trigger Impactpool workflow
+    - name: Trigger Impactpool workflow
+      uses: actions/github-script@v7
+      with:
+        script: |
+          await github.rest.actions.createWorkflowDispatch({
+            owner: 'Musa-Battah',
+            repo: 'impactpool-scraper',
+            workflow_id: 'scraper.yml',
+            ref: 'main'
+          })
+          console.log('✅ Impactpool workflow triggered successfully')
+    
     - name: Upload CSV artifact
       if: env.CSV_FILE != ''
       uses: actions/upload-artifact@v4
@@ -123,6 +164,10 @@ jobs:
           - Run Number: ${{ github.run_number }}
           
           📁 CSV file with valid Nigerian locations is attached.
+          
+          🔄 CSV also sent to WordPress: https://oakjobs.online
+          
+          🔄 Impactpool scraper has been triggered and will run shortly.
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send no-results email
@@ -143,7 +188,7 @@ jobs:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
           
-          Check the review file in GitHub Actions artifacts.
+          🔄 Impactpool scraper will still run.
     
     - name: Send no-jobs-at-all email
       if: success() && env.CSV_FILE == '' && env.REVIEW_FILE == ''
@@ -163,7 +208,7 @@ jobs:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
           
-          This is normal. The scraper will check again tomorrow.
+          🔄 Impactpool scraper will still run.
     
     - name: Send failure notification
       if: failure()
