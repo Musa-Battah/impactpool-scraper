@@ -2,7 +2,6 @@ name: ReliefWeb Nigeria Jobs Scraper
 
 on:
   schedule:
-    # 10 AM Nigerian Time (9 AM UTC)
     - cron: '0 9 * * *'
   workflow_dispatch:
   push:
@@ -43,7 +42,6 @@ jobs:
       run: |
         python v13.py
         
-        # Find generated CSV files
         CSV_FILE=$(ls job_outputs/nigeria_jobs_*.csv 2>/dev/null | head -1)
         REVIEW_FILE=$(ls job_outputs/nigeria_jobs_review_needed_*.csv 2>/dev/null | head -1)
         
@@ -64,14 +62,10 @@ jobs:
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        
         git add job_outputs/last_run_state.json
         git add job_outputs/_processed_ids.txt
-        
         git diff --staged --quiet || git commit -m "Update ReliefWeb state and processed IDs [skip ci]"
-        
         git pull --rebase
-        
         for attempt in 1 2 3; do
           echo "Push attempt $attempt..."
           if git push; then
@@ -82,21 +76,20 @@ jobs:
             sleep 5
             git pull --rebase
           fi
-          
           if [ $attempt -eq 3 ]; then
             echo "❌ Push failed after 3 attempts"
             exit 1
           fi
         done
     
-    # ⭐ NEW: Send CSV to WordPress
+    # ⭐ Send CSV to WordPress with SSL fix (-k flag)
     - name: Send CSV to WordPress
       if: env.CSV_FILE != ''
       run: |
         WP_URL="https://oakjobs.online"
         echo "📤 Sending ReliefWeb CSV to WordPress..."
         
-        RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+        RESPONSE=$(curl -s -k -w "\n%{http_code}" -X POST \
           "$WP_URL/wp-json/csv/v1/import" \
           -H "Content-Type: text/csv" \
           -H "X-API-Key: ${{ secrets.WP_API_KEY }}" \
@@ -116,7 +109,6 @@ jobs:
           echo "Response body: $BODY"
         fi
     
-    # Trigger Impactpool workflow
     - name: Trigger Impactpool workflow
       uses: actions/github-script@v7
       with:
@@ -163,11 +155,10 @@ jobs:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
           
-          📁 CSV file with valid Nigerian locations is attached.
+          📁 CSV file attached.
           
-          🔄 CSV also sent to WordPress: https://oakjobs.online
-          
-          🔄 Impactpool scraper has been triggered and will run shortly.
+          🔄 CSV sent to WordPress: https://oakjobs.online
+          🔄 Impactpool triggered and will run shortly.
         attachments: ${{ env.CSV_FILE }}
     
     - name: Send no-results email
@@ -184,10 +175,6 @@ jobs:
         body: |
           ⚠️ ReliefWeb scraper ran but found NO jobs with valid Nigerian cities.
           
-          📊 Run Details:
-          - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
-          - Run Number: ${{ github.run_number }}
-          
           🔄 Impactpool scraper will still run.
     
     - name: Send no-jobs-at-all email
@@ -203,10 +190,6 @@ jobs:
         from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
         body: |
           📭 ReliefWeb scraper ran but found NO new jobs at all.
-          
-          📊 Run Details:
-          - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
-          - Run Number: ${{ github.run_number }}
           
           🔄 Impactpool scraper will still run.
     
