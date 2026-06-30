@@ -889,5 +889,27 @@
       "location": "Kano",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1222767": {
+    "title": "Emergency Preparedness and Response Manager - Internal Only at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1222767",
+    "date": "2026-06-30",
+    "timestamp": "2026-06-30T11:20:09.410074",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1222784": {
+    "title": "Partnerships Officer - Liaison at UNOPS - United Nations Office for Project Services",
+    "url": "https://www.impactpool.org/jobs/1222784",
+    "date": "2026-06-30",
+    "timestamp": "2026-06-30T11:24:44.267932",
+    "scraped_data": {
+      "company": "UNOPS - United Nations Office for Project Services",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
