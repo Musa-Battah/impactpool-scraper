@@ -82,17 +82,16 @@ jobs:
           fi
         done
     
-    # ⭐ Send CSV to WordPress with SSL fix (-k flag)
-    - name: Send CSV to WordPress
+    # ⭐ Send CSV to Make.com webhook
+    - name: Send CSV to Make.com
       if: env.CSV_FILE != ''
       run: |
-        WP_URL="https://oakjobs.online"
-        echo "📤 Sending ReliefWeb CSV to WordPress..."
+        echo "📤 Sending ReliefWeb CSV to Make.com..."
+        MAKE_URL="https://hook.us2.make.com/1cvqy6osojq9qav37l0ebkugds3n37bh"
         
-        RESPONSE=$(curl -s -k -w "\n%{http_code}" -X POST \
-          "$WP_URL/wp-json/csv/v1/import" \
+        RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+          "$MAKE_URL" \
           -H "Content-Type: text/csv" \
-          -H "X-API-Key: ${{ secrets.WP_API_KEY }}" \
           --data-binary "@${{ env.CSV_FILE }}" \
           --max-time 60)
         
@@ -100,13 +99,11 @@ jobs:
         BODY=$(echo "$RESPONSE" | sed '$d')
         
         echo "HTTP Status: $HTTP_CODE"
-        echo "Response: $BODY"
-        
-        if [ "$HTTP_CODE" = "200" ]; then
-          echo "✅ ReliefWeb CSV successfully sent to WordPress!"
+        if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "201" ]; then
+          echo "✅ CSV successfully sent to Make.com!"
         else
-          echo "⚠️ Warning: WordPress returned HTTP $HTTP_CODE"
-          echo "Response body: $BODY"
+          echo "⚠️ Warning: Make.com returned HTTP $HTTP_CODE"
+          echo "Response: $BODY"
         fi
     
     - name: Trigger Impactpool workflow
@@ -137,61 +134,32 @@ jobs:
         path: ${{ env.REVIEW_FILE }}
         retention-days: 30
     
-    - name: Send email with CSV results
-      if: success() && env.CSV_FILE != ''
+    - name: Send email report
+      if: success()
       uses: dawidd6/action-send-mail@v3
       with:
         server_address: smtp.gmail.com
         server_port: 465
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "🌍 ReliefWeb Nigeria Jobs - $(date +'%Y-%m-%d')"
+        subject: "🌍 ReliefWeb Report - $(date +'%Y-%m-%d')"
         to: ${{ secrets.EMAIL_TO }}
         from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
         body: |
-          ✅ ReliefWeb Nigeria job scraper completed successfully!
+          ✅ ReliefWeb job scraper completed successfully!
           
           📊 Run Details:
           - Time: $(date '+%Y-%m-%d %H:%M:%S') Nigerian Time
           - Run Number: ${{ github.run_number }}
+          - CSV File: ${{ env.CSV_FILE }}
+          - Review File: ${{ env.REVIEW_FILE != '' && env.REVIEW_FILE || 'None' }}
           
-          📁 CSV file attached.
+          📤 CSV sent to Make.com: ${{ env.CSV_FILE != '' && '✅ Yes' || '❌ No (no jobs found)' }}
           
-          🔄 CSV sent to WordPress: https://oakjobs.online
-          🔄 Impactpool triggered and will run shortly.
-        attachments: ${{ env.CSV_FILE }}
-    
-    - name: Send no-results email
-      if: success() && env.CSV_FILE == '' && env.REVIEW_FILE != ''
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "⚠️ ReliefWeb - No Valid Locations Found - $(date +'%Y-%m-%d')"
-        to: ${{ secrets.EMAIL_TO }}
-        from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
-        body: |
-          ⚠️ ReliefWeb scraper ran but found NO jobs with valid Nigerian cities.
+          🔄 Impactpool workflow triggered: ${{ success() && '✅ Yes' || '❌ No' }}
           
-          🔄 Impactpool scraper will still run.
-    
-    - name: Send no-jobs-at-all email
-      if: success() && env.CSV_FILE == '' && env.REVIEW_FILE == ''
-      uses: dawidd6/action-send-mail@v3
-      with:
-        server_address: smtp.gmail.com
-        server_port: 465
-        username: ${{ secrets.EMAIL_USERNAME }}
-        password: ${{ secrets.EMAIL_PASSWORD }}
-        subject: "📭 ReliefWeb - No Jobs Found - $(date +'%Y-%m-%d')"
-        to: ${{ secrets.EMAIL_TO }}
-        from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
-        body: |
-          📭 ReliefWeb scraper ran but found NO new jobs at all.
-          
-          🔄 Impactpool scraper will still run.
+          📁 CSV attached (backup) ${{ env.CSV_FILE != '' && '✅' || '❌' }}
+        attachments: ${{ env.CSV_FILE != '' && env.CSV_FILE || '' }}
     
     - name: Send failure notification
       if: failure()
@@ -205,7 +173,7 @@ jobs:
         to: ${{ secrets.EMAIL_TO }}
         from: ReliefWeb Scraper <${{ secrets.EMAIL_USERNAME }}>
         body: |
-          ❌ The ReliefWeb Nigeria job scraper has failed!
+          ❌ The ReliefWeb job scraper has failed!
           
           🔍 Check the error log:
           ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
