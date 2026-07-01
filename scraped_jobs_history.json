@@ -911,5 +911,49 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1223029": {
+    "title": "Yoma Youth Ecosystem Consultant, GPD, Generation Unlimited, 12 months, New York HQ (Remote), #594095 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1223029",
+    "date": "2026-07-01",
+    "timestamp": "2026-07-01T11:41:47.090569",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "New York City",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223020": {
+    "title": "Social & Behavior Change Specialist, Polio Outbreak Response (NO-3), TA (364 days), #137832, Abuja - Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1223020",
+    "date": "2026-07-01",
+    "timestamp": "2026-07-01T11:57:58.802472",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1222895": {
+    "title": "Health Officer – National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1222895",
+    "date": "2026-07-01",
+    "timestamp": "2026-07-01T12:00:22.121547",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1222921": {
+    "title": "DEVELOPMENT OF STANDARD OPERATING PROCEDURES FOR COUNTERING SMUGGLING OF MIGRANTS (HOMEBASED, ABUJA NIGERIA) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1222921",
+    "date": "2026-07-01",
+    "timestamp": "2026-07-01T12:02:04.903654",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Development"
+    }
   }
 }
