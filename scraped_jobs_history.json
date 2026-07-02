@@ -955,5 +955,38 @@
       "location": "Abuja",
       "category": "Development"
     }
+  },
+  "https://www.impactpool.org/jobs/1223230": {
+    "title": "GBV / Protection Case Management Specialist at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1223230",
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T11:23:49.619329",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223193": {
+    "title": "Senior Medical Assistant (Maternity Cover) Lagos at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1223193",
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T11:48:39.505189",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Lagos",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223227": {
+    "title": "Accountability Assistant at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1223227",
+    "date": "2026-07-02",
+    "timestamp": "2026-07-02T11:53:15.466633",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
   }
 }
