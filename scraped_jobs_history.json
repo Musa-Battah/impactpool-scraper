@@ -1032,5 +1032,49 @@
       "location": "Maiduguri",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1223761": {
+    "title": "National Security Officer at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1223761",
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T10:27:19.838595",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223806": {
+    "title": "Health Field Officer 2 at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1223806",
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T10:29:43.622481",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Damaturu",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223807": {
+    "title": "Supply-Chain Admin/Customer Service Desk Officer 1 (800499) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1223807",
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T10:37:12.227423",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1223809": {
+    "title": "Anticipatory Action Coordinator - Nigeria at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1223809",
+    "date": "2026-07-04",
+    "timestamp": "2026-07-04T10:52:31.628969",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Management"
+    }
   }
 }
