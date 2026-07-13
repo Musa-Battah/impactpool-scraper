@@ -73,7 +73,7 @@ jobs:
           fi
         done
     
-    # ⭐ Send CSV directly to Next.js API (replaces Make.com)
+    # ⭐ Send CSV directly to Next.js API (follows redirects)
     - name: Send CSV to Next.js API
       if: env.CSV_FILE != ''
       run: |
@@ -81,7 +81,7 @@ jobs:
         API_URL="https://oakjobs.online/api/csv/import"
         API_KEY="${{ secrets.CSV_IMPORT_API_KEY }}"
         
-        RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+        RESPONSE=$(curl -s -L -w "\n%{http_code}" -X POST \
           "$API_URL" \
           -H "X-API-Key: $API_KEY" \
           -H "Content-Type: text/csv" \
