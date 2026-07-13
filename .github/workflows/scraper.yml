@@ -73,15 +73,17 @@ jobs:
           fi
         done
     
-    # ⭐ Send CSV to Make.com webhook
-    - name: Send CSV to Make.com
+    # ⭐ Send CSV directly to Next.js API (replaces Make.com)
+    - name: Send CSV to Next.js API
       if: env.CSV_FILE != ''
       run: |
-        echo "📤 Sending Impactpool CSV to Make.com..."
-        MAKE_URL="https://hook.us2.make.com/1cvqy6osojq9qav37l0ebkugds3n37bh"
+        echo "📤 Sending Impactpool CSV to Next.js API..."
+        API_URL="https://oakjobs.online/api/csv/import"
+        API_KEY="${{ secrets.CSV_IMPORT_API_KEY }}"
         
         RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-          "$MAKE_URL" \
+          "$API_URL" \
+          -H "X-API-Key: $API_KEY" \
           -H "Content-Type: text/csv" \
           --data-binary "@${{ env.CSV_FILE }}" \
           --max-time 60)
@@ -91,9 +93,10 @@ jobs:
         
         echo "HTTP Status: $HTTP_CODE"
         if [ "$HTTP_CODE" = "200" ] || [ "$HTTP_CODE" = "201" ]; then
-          echo "✅ CSV successfully sent to Make.com!"
+          echo "✅ CSV successfully imported to Next.js!"
+          echo "Response: $BODY"
         else
-          echo "⚠️ Warning: Make.com returned HTTP $HTTP_CODE"
+          echo "⚠️ Warning: API returned HTTP $HTTP_CODE"
           echo "Response: $BODY"
         fi
     
@@ -123,7 +126,7 @@ jobs:
           - Run Number: ${{ github.run_number }}
           - CSV File: ${{ env.CSV_FILE }}
           
-          📤 CSV sent to Make.com: ${{ env.CSV_FILE != '' && '✅ Yes' || '❌ No (no jobs found)' }}
+          📤 CSV imported to Next.js: ${{ env.CSV_FILE != '' && '✅ Yes' || '❌ No (no jobs found)' }}
           
           📁 CSV also attached to this email (backup).
         attachments: ${{ env.CSV_FILE != '' && env.CSV_FILE || '' }}
