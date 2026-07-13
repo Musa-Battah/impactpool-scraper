@@ -159,9 +159,9 @@ jobs:
           
           📤 CSV imported to Next.js: ${{ env.CSV_FILE != '' && '✅ Yes' || '❌ No (no jobs found)' }}
           
-          🔄 Impactpool workflow triggered: ${{ success() && '✅ Yes' || '❌ No' }}
+          🔄 Impactpool workflow triggered
           
-          📁 CSV attached (backup) ${{ env.CSV_FILE != '' && '✅' || '❌' }}
+          📁 CSV attached (backup)
         attachments: ${{ env.CSV_FILE != '' && env.CSV_FILE || '' }}
     
     - name: Send failure notification
