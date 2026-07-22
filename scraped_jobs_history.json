@@ -1164,5 +1164,27 @@
       "location": "Abuja",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1227254": {
+    "title": "Economic Recovery Officer at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1227254",
+    "date": "2026-07-22",
+    "timestamp": "2026-07-22T10:54:55.009377",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Nigeria",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1227205": {
+    "title": "Logistics Associate (Invoicing) at UNV - United Nations Volunteers",
+    "url": "https://www.impactpool.org/jobs/1227205",
+    "date": "2026-07-22",
+    "timestamp": "2026-07-22T11:01:43.713845",
+    "scraped_data": {
+      "company": "UNV - United Nations Volunteers",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
