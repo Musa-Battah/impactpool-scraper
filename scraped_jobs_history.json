@@ -1186,5 +1186,38 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1227456": {
+    "title": "Consultant for the development of FLN Policy and implementation plan (Internationals only), Nigeria, Abuja (Office-based), 6 months, #594660 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1227456",
+    "date": "2026-07-23",
+    "timestamp": "2026-07-23T10:35:09.952819",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1227411": {
+    "title": "Expedited Recruitment: Project Assistant PxD/MHPSS (Lagos, Kano) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1227411",
+    "date": "2026-07-23",
+    "timestamp": "2026-07-23T10:36:43.052415",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Lagos",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1227505": {
+    "title": "Scholarship and Communications Coordinator at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1227505",
+    "date": "2026-07-23",
+    "timestamp": "2026-07-23T10:52:22.944416",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Nairobi",
+      "category": "Management"
+    }
   }
 }
