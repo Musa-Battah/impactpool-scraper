@@ -1219,5 +1219,27 @@
       "location": "Nairobi",
       "category": "Management"
     }
+  },
+  "https://www.impactpool.org/jobs/1227690": {
+    "title": "Administrative Assistant (G-4), TA (364 days), #138229, Maiduguri, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1227690",
+    "date": "2026-07-24",
+    "timestamp": "2026-07-24T10:30:24.691766",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1227689": {
+    "title": "Logistics Associate, G-6, TA, (364 days), #00138198, Lagos, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1227689",
+    "date": "2026-07-24",
+    "timestamp": "2026-07-24T10:55:22.095475",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Lagos",
+      "category": "Technology"
+    }
   }
 }
