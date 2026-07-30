@@ -1362,5 +1362,27 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1228681": {
+    "title": "Catalytic Finance Specialist (Anglophone West Africa) at UNOPS - United Nations Office for Project Services",
+    "url": "https://www.impactpool.org/jobs/1228681",
+    "date": "2026-07-30",
+    "timestamp": "2026-07-30T10:31:29.988428",
+    "scraped_data": {
+      "company": "UNOPS - United Nations Office for Project Services",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1228671": {
+    "title": "Cash Coordinator – NEWCAP Consortium at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1228671",
+    "date": "2026-07-30",
+    "timestamp": "2026-07-30T10:51:55.330788",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Management"
+    }
   }
 }
