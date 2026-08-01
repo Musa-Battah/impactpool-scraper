@@ -1395,5 +1395,82 @@
       "location": "Abuja",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1229118": {
+    "title": "Consultant Migration Health Nurse (G5) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1229118",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:10:59.347872",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Lagos",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229093": {
+    "title": "Nutrition Social Behaviour Change and Knowledge Management Consultant, Abuja, Office-based #594833 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1229093",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:14:44.040051",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229122": {
+    "title": "Medical Assistant at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1229122",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:16:26.888735",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Lagos",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229100": {
+    "title": "Financial Management Lead Consultant National, Abuja, Nigeria (remote) 12 months (594869) at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1229100",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:26:51.806175",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229099": {
+    "title": "Programme Associate (G-6), TA (364 days), #138196, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1229099",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:28:34.072015",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229101": {
+    "title": "Financial System Strengthening (FSS) Associate National Consultant – Adamawa State, Bauchi, Nigeria - 12 months (594871) at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1229101",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:35:23.264812",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Bauchi",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1229170": {
+    "title": "Protection Coordinator-Internal Only at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1229170",
+    "date": "2026-08-01",
+    "timestamp": "2026-08-01T10:40:40.077544",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
   }
 }
