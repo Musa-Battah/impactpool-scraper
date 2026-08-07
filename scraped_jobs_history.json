@@ -1505,5 +1505,38 @@
       "location": "Abuja",
       "category": "Management"
     }
+  },
+  "https://www.impactpool.org/jobs/1230117": {
+    "title": "Analyst, ASB at EBRD - European Bank for Reconstruction and Development",
+    "url": "https://www.impactpool.org/jobs/1230117",
+    "date": "2026-08-07",
+    "timestamp": "2026-08-07T09:14:03.540951",
+    "scraped_data": {
+      "company": "EBRD - European Bank for Reconstruction and Development",
+      "location": "Lagos",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230236": {
+    "title": "Programme Manager, P-4, TA (364 days), #138145, Maiduguri (Borno), Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1230236",
+    "date": "2026-08-07",
+    "timestamp": "2026-08-07T09:37:31.220929",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230235": {
+    "title": "GVA - Multiple positions: WASH Specialist, NO3, TA (364 days), Multiple locations (Maiduguri, Bauchi, Kano, Kaduna, Lagos, Sokoto, Enugu, Abuja), Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1230235",
+    "date": "2026-08-07",
+    "timestamp": "2026-08-07T09:39:13.260697",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kano",
+      "category": "Healthcare"
+    }
   }
 }
