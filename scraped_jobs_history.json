@@ -1538,5 +1538,60 @@
       "location": "Kano",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1230461": {
+    "title": "Senior Programme Associate (G-7), TA (364 days), #138170, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1230461",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T08:49:33.281974",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230451": {
+    "title": "Learning and Scaling Lead, Nigeria at UNOPS - United Nations Office for Project Services",
+    "url": "https://www.impactpool.org/jobs/1230451",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T08:59:15.187878",
+    "scraped_data": {
+      "company": "UNOPS - United Nations Office for Project Services",
+      "location": "Lagos",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230438": {
+    "title": "National Operations Specialist (SURAGGWA Project) at FAO - Food and Agriculture Organization of the United Nations",
+    "url": "https://www.impactpool.org/jobs/1230438",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T09:03:51.526493",
+    "scraped_data": {
+      "company": "FAO - Food and Agriculture Organization of the United Nations",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230518": {
+    "title": "GVA - Multiple positions: WASH Officer NOA, TA, Multiple locations (Maiduguri, Bauchi, Kano, Kaduna, Lagos, Sokoto, Enugu, Abuja), Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1230518",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T09:15:36.003124",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Maiduguri",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1230462": {
+    "title": "Health Officer (Polio), NO-2, #138144, TA (364 days), Kano- Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1230462",
+    "date": "2026-08-08",
+    "timestamp": "2026-08-08T09:17:18.875521",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kano",
+      "category": "Healthcare"
+    }
   }
 }
