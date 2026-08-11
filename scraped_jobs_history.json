@@ -1593,5 +1593,16 @@
       "location": "Kano",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1230598": {
+    "title": "Legal Adviser 1 at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1230598",
+    "date": "2026-08-11",
+    "timestamp": "2026-08-11T09:29:59.522954",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
