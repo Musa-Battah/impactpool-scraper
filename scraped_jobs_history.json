@@ -1659,5 +1659,27 @@
       "location": "Nigeria",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1231359": {
+    "title": "Health Manager, P-4, FT, #083142, Abuja - Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1231359",
+    "date": "2026-08-14",
+    "timestamp": "2026-08-14T09:14:03.777189",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1231421": {
+    "title": "Special Assistant to the CEO and UN SRSG at UNOPS - United Nations Office for Project Services",
+    "url": "https://www.impactpool.org/jobs/1231421",
+    "date": "2026-08-14",
+    "timestamp": "2026-08-14T09:20:41.050877",
+    "scraped_data": {
+      "company": "UNOPS - United Nations Office for Project Services",
+      "location": "Lagos",
+      "category": "Technology"
+    }
   }
 }
