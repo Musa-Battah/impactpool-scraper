@@ -1692,5 +1692,27 @@
       "location": "Nigeria",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1232631": {
+    "title": "DTM Project Assistant at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1232631",
+    "date": "2026-08-21",
+    "timestamp": "2026-08-21T08:54:33.996830",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Jalingo",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1232628": {
+    "title": "Field Team Leader DTM at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1232628",
+    "date": "2026-08-21",
+    "timestamp": "2026-08-21T09:03:35.850155",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Jalingo",
+      "category": "Technology"
+    }
   }
 }
