@@ -1714,5 +1714,16 @@
       "location": "Jalingo",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1233159": {
+    "title": "Field Security Associate at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1233159",
+    "date": "2026-08-25",
+    "timestamp": "2026-08-25T08:50:29.472393",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Benin City",
+      "category": "Technology"
+    }
   }
 }
