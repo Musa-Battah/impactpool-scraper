@@ -1736,5 +1736,49 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1233521": {
+    "title": "Country Finance Assistant at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1233521",
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T19:04:10.100980",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1233850": {
+    "title": "Project Manager (Criminal Justice Reform Component - C1) RoLAC II, Nigeria at IDEA - International Institute for Democracy and Electoral Assistance",
+    "url": "https://www.impactpool.org/jobs/1233850",
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T19:05:52.310403",
+    "scraped_data": {
+      "company": "IDEA - International Institute for Democracy and Electoral Assistance",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1232630": {
+    "title": "Data Enumerator (DTM) at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1232630",
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T19:13:04.141084",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Lau",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1233712": {
+    "title": "National Consultancy-Domestication of the National Guidelines for the Facilitation of Re-entry of Pregnant and Married Adolescent Girls into Schools in Kwara State, Abuja Nigeria , 3 Months. at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1233712",
+    "date": "2026-08-27",
+    "timestamp": "2026-08-27T19:14:47.092653",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
