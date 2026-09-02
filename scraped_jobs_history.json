@@ -1802,5 +1802,16 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1234351": {
+    "title": "INFORMATION MANAGEMENT OFFICER-CONSORTIUM at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1234351",
+    "date": "2026-09-02",
+    "timestamp": "2026-09-02T12:46:32.228034",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
