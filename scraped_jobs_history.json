@@ -1813,5 +1813,49 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1235018": {
+    "title": "Head of Programme Coordination and Innovation Unit (P) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1235018",
+    "date": "2026-09-04",
+    "timestamp": "2026-09-04T12:46:13.106303",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235030": {
+    "title": "Operations (EORE QA / QC) Senior Assistant at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1235030",
+    "date": "2026-09-04",
+    "timestamp": "2026-09-04T12:57:04.512437",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1234919": {
+    "title": "Administrative Assistant at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1234919",
+    "date": "2026-09-04",
+    "timestamp": "2026-09-04T12:58:37.214928",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Kano",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235063": {
+    "title": "Senior Portfolio Manager, NTDs at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1235063",
+    "date": "2026-09-04",
+    "timestamp": "2026-09-04T13:03:22.774315",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Abuja",
+      "category": "Management"
+    }
   }
 }
