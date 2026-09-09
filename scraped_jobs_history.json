@@ -1868,5 +1868,38 @@
       "location": "Abuja",
       "category": "Management"
     }
+  },
+  "https://www.impactpool.org/jobs/1235582": {
+    "title": "Assistant FAO Representative (Programme) at FAO - Food and Agriculture Organization of the United Nations",
+    "url": "https://www.impactpool.org/jobs/1235582",
+    "date": "2026-09-09",
+    "timestamp": "2026-09-09T12:57:03.983844",
+    "scraped_data": {
+      "company": "FAO - Food and Agriculture Organization of the United Nations",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235623": {
+    "title": "Health Specialist, NO-3, TA, (364 days), #138401 Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1235623",
+    "date": "2026-09-09",
+    "timestamp": "2026-09-09T13:03:29.247797",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235579": {
+    "title": "National Ecological Project M & E Specialist (SURAGGWA) at FAO - Food and Agriculture Organization of the United Nations",
+    "url": "https://www.impactpool.org/jobs/1235579",
+    "date": "2026-09-09",
+    "timestamp": "2026-09-09T13:12:08.988770",
+    "scraped_data": {
+      "company": "FAO - Food and Agriculture Organization of the United Nations",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
   }
 }
