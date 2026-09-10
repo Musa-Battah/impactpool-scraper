@@ -1901,5 +1901,38 @@
       "location": "Nigeria",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1235750": {
+    "title": "Senior Portfolio Manager Inclusive Health at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1235750",
+    "date": "2026-09-10",
+    "timestamp": "2026-09-10T12:51:12.347653",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Bensheim",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235749": {
+    "title": "Senior Driver at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1235749",
+    "date": "2026-09-10",
+    "timestamp": "2026-09-10T13:02:27.665984",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Nigeria",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1235816": {
+    "title": "Expedited SVN -Information and Communication Technology Assistant (RMU), Abuja Nigeria at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1235816",
+    "date": "2026-09-10",
+    "timestamp": "2026-09-10T13:03:59.145101",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
