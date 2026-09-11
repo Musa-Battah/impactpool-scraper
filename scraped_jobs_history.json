@@ -1934,5 +1934,49 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1236057": {
+    "title": "Advocacy and Community Liaison Officer at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1236057",
+    "date": "2026-09-11",
+    "timestamp": "2026-09-11T12:46:12.033142",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1236005": {
+    "title": "National Social safeguards and Gender specialist - SURAGGWA at FAO - Food and Agriculture Organization of the United Nations",
+    "url": "https://www.impactpool.org/jobs/1236005",
+    "date": "2026-09-11",
+    "timestamp": "2026-09-11T13:01:51.276652",
+    "scraped_data": {
+      "company": "FAO - Food and Agriculture Organization of the United Nations",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1236060": {
+    "title": "Warehouse Officer at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1236060",
+    "date": "2026-09-11",
+    "timestamp": "2026-09-11T13:06:37.741237",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Yola",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1236006": {
+    "title": "National Value Chains and Rural Finance Specialist - SURAGGWA at FAO - Food and Agriculture Organization of the United Nations",
+    "url": "https://www.impactpool.org/jobs/1236006",
+    "date": "2026-09-11",
+    "timestamp": "2026-09-11T13:15:06.818997",
+    "scraped_data": {
+      "company": "FAO - Food and Agriculture Organization of the United Nations",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
   }
 }
