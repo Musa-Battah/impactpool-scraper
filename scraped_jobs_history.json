@@ -1989,5 +1989,16 @@
       "location": "Abuja",
       "category": "Administration"
     }
+  },
+  "https://www.impactpool.org/jobs/1236901": {
+    "title": "Youth Engagement Associate at UNV - United Nations Volunteers",
+    "url": "https://www.impactpool.org/jobs/1236901",
+    "date": "2026-09-17",
+    "timestamp": "2026-09-17T13:17:17.530757",
+    "scraped_data": {
+      "company": "UNV - United Nations Volunteers",
+      "location": "Lagos",
+      "category": "Technology"
+    }
   }
 }
