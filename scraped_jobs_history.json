@@ -2000,5 +2000,27 @@
       "location": "Lagos",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1237337": {
+    "title": "Procurement Officer (IP2) at ICMPD - International Centre for Migration Policy Development",
+    "url": "https://www.impactpool.org/jobs/1237337",
+    "date": "2026-09-18",
+    "timestamp": "2026-09-18T12:56:45.048114",
+    "scraped_data": {
+      "company": "ICMPD - International Centre for Migration Policy Development",
+      "location": "Abuja",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1237107": {
+    "title": "Learning Experience Designer at Peek Vision Limited",
+    "url": "https://www.impactpool.org/jobs/1237107",
+    "date": "2026-09-18",
+    "timestamp": "2026-09-18T13:03:09.724569",
+    "scraped_data": {
+      "company": "Peek Vision Limited",
+      "location": "Kenya",
+      "category": "Technology"
+    }
   }
 }
