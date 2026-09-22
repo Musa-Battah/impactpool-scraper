@@ -2033,5 +2033,27 @@
       "location": "Maiduguri",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1237734": {
+    "title": "Operations Manager, P-3, TA (364 days), #138626, Lagos - Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1237734",
+    "date": "2026-09-22",
+    "timestamp": "2026-09-22T13:21:35.886217",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Lagos",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1237761": {
+    "title": "Medical Assistant at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1237761",
+    "date": "2026-09-22",
+    "timestamp": "2026-09-22T13:38:05.821401",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Lagos",
+      "category": "Healthcare"
+    }
   }
 }
