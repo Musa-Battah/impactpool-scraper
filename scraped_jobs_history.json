@@ -2055,5 +2055,27 @@
       "location": "Lagos",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1238361": {
+    "title": "SEXUAL REPRODUCTIVE HEALTH - GBV ENGAGEMENT OFFICER at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1238361",
+    "date": "2026-09-25",
+    "timestamp": "2026-09-25T13:28:27.540810",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1238358": {
+    "title": "Senior Sexual Reproductive Health Officer - Capacity Building at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1238358",
+    "date": "2026-09-25",
+    "timestamp": "2026-09-25T13:33:53.204796",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Sokoto",
+      "category": "Healthcare"
+    }
   }
 }
