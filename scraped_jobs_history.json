@@ -2077,5 +2077,16 @@
       "location": "Sokoto",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1238628": {
+    "title": "Causal Workers-Driver(Abuja) at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1238628",
+    "date": "2026-09-26",
+    "timestamp": "2026-09-26T12:58:51.703021",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Administration"
+    }
   }
 }
