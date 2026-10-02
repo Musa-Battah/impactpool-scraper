@@ -2088,5 +2088,60 @@
       "location": "Abuja",
       "category": "Administration"
     }
+  },
+  "https://www.impactpool.org/jobs/1239518": {
+    "title": "National Consultant, ASWA III Systems strengthening and knowledge management, Abuja, Nigeria (Remote + travel), 6 months, #596032 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1239518",
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T14:40:14.802355",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1239438": {
+    "title": "Portfolio Manager, Inclusive Health Initiative (IHI) – French Speaking at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1239438",
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T14:45:44.344931",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Berlin",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1239320": {
+    "title": "Hausa Interpreter at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1239320",
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T14:51:13.972805",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1239430": {
+    "title": "Health Outreach Officer at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1239430",
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T15:06:09.014540",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Gusau",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1239432": {
+    "title": "SRH Community Mobilization Assistant at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1239432",
+    "date": "2026-10-02",
+    "timestamp": "2026-10-02T15:08:32.716804",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Gusau",
+      "category": "Technology"
+    }
   }
 }
