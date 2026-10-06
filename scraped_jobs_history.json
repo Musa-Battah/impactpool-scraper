@@ -2154,5 +2154,27 @@
       "location": "Abuja",
       "category": "Administration"
     }
+  },
+  "https://www.impactpool.org/jobs/1240160": {
+    "title": "Data Enumerator (DTM) at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1240160",
+    "date": "2026-10-06",
+    "timestamp": "2026-10-06T14:59:22.516710",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Gusau",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1240161": {
+    "title": "Project Assistant (DTM) at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1240161",
+    "date": "2026-10-06",
+    "timestamp": "2026-10-06T15:14:04.509303",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Gusau",
+      "category": "Technology"
+    }
   }
 }
