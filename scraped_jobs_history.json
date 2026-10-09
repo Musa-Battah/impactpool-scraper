@@ -2198,5 +2198,16 @@
       "location": "Bensheim",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1240750": {
+    "title": "Independent External Consultant at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1240750",
+    "date": "2026-10-09",
+    "timestamp": "2026-10-09T15:21:11.997216",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Port Harcourt",
+      "category": "Consultancy"
+    }
   }
 }
