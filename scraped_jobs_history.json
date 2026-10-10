@@ -2209,5 +2209,27 @@
       "location": "Port Harcourt",
       "category": "Consultancy"
     }
+  },
+  "https://www.impactpool.org/jobs/1240957": {
+    "title": "Consultancy to provide technical support to advance large-scale food fortification and iodine nutrition agenda in WCAR, Office based in Abuja, Nigeria with travel, 10 months, # 596210 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1240957",
+    "date": "2026-10-10",
+    "timestamp": "2026-10-10T14:54:21.754171",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241063": {
+    "title": "Senior Associate, Country Support - Mental Health at CHAI - Clinton Health Access Initiative",
+    "url": "https://www.impactpool.org/jobs/1241063",
+    "date": "2026-10-10",
+    "timestamp": "2026-10-10T15:11:22.426134",
+    "scraped_data": {
+      "company": "CHAI - Clinton Health Access Initiative",
+      "location": "Rwanda",
+      "category": "Healthcare"
+    }
   }
 }
