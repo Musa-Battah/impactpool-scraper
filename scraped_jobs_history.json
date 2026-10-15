@@ -2242,5 +2242,71 @@
       "location": "Nigeria",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1241907": {
+    "title": "Economic Recovery Officer - Talata Mafara (Zamfara) at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1241907",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T13:31:59.787989",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Talata Mafara",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241904": {
+    "title": "Economic Recovery Officer - Katsina at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1241904",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T13:38:59.878046",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Katsina",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241997": {
+    "title": "Finance and Administrative Assistant - Yola, Adamawa State (G5) at ILO - International Labour Organization",
+    "url": "https://www.impactpool.org/jobs/1241997",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T13:52:13.691893",
+    "scraped_data": {
+      "company": "ILO - International Labour Organization",
+      "location": "Yola",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241906": {
+    "title": "Economic Recovery Officer - Sokoto North/South at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1241906",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T14:11:04.224809",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Sokoto",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241998": {
+    "title": "National Project Coordinator - Yola, Adamawa State (NOB) at ILO - International Labour Organization",
+    "url": "https://www.impactpool.org/jobs/1241998",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T14:15:08.691016",
+    "scraped_data": {
+      "company": "ILO - International Labour Organization",
+      "location": "Yola",
+      "category": "Management"
+    }
+  },
+  "https://www.impactpool.org/jobs/1241065": {
+    "title": "Senior Manager, Country Engagement - Mental Health at CHAI - Clinton Health Access Initiative",
+    "url": "https://www.impactpool.org/jobs/1241065",
+    "date": "2026-10-15",
+    "timestamp": "2026-10-15T14:19:54.997005",
+    "scraped_data": {
+      "company": "CHAI - Clinton Health Access Initiative",
+      "location": "Ethiopia",
+      "category": "Healthcare"
+    }
   }
 }
