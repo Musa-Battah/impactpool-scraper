@@ -2308,5 +2308,60 @@
       "location": "Ethiopia",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1242190": {
+    "title": "National Consultant – Financial System Strengthening (FSS) Associate Consultant – Sokoto State PMR, Sokoto 12 months office based 596366 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1242190",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T13:08:35.463960",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Sokoto",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1242222": {
+    "title": "Supply Chain Assistant – Procurement at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1242222",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T13:18:34.611538",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Maiduguri",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1242223": {
+    "title": "Supply Chain Officer – Travel and Fleet, Nigeria at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1242223",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T13:28:44.541602",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Maiduguri",
+      "category": "Administration"
+    }
+  },
+  "https://www.impactpool.org/jobs/1242244": {
+    "title": "Partnerships Manager at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1242244",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T13:31:06.414078",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1242192": {
+    "title": "People and Culture Associate, G-6, TA (364 days), #00138862, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1242192",
+    "date": "2026-10-16",
+    "timestamp": "2026-10-16T13:39:33.667458",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
