@@ -2374,5 +2374,16 @@
       "location": "Maiduguri",
       "category": "Administration"
     }
+  },
+  "https://www.impactpool.org/jobs/1243022": {
+    "title": "Manager, Program & Operations, Women’s and Newborn Health at CHAI - Clinton Health Access Initiative",
+    "url": "https://www.impactpool.org/jobs/1243022",
+    "date": "2026-10-21",
+    "timestamp": "2026-10-21T13:46:10.703664",
+    "scraped_data": {
+      "company": "CHAI - Clinton Health Access Initiative",
+      "location": "Nigeria",
+      "category": "Healthcare"
+    }
   }
 }
