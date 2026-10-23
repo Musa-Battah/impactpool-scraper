@@ -2396,5 +2396,27 @@
       "location": "Abuja",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1243574": {
+    "title": "Programme Assistant (G-5), TA (364 days), #139003, Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1243574",
+    "date": "2026-10-23",
+    "timestamp": "2026-10-23T13:36:17.399630",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1243693": {
+    "title": "Procurement Manager at CHAI - Clinton Health Access Initiative",
+    "url": "https://www.impactpool.org/jobs/1243693",
+    "date": "2026-10-23",
+    "timestamp": "2026-10-23T13:44:05.485454",
+    "scraped_data": {
+      "company": "CHAI - Clinton Health Access Initiative",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
   }
 }
