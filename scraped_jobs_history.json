@@ -2517,5 +2517,16 @@
       "location": "Maiduguri",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1245148": {
+    "title": "Nutrition Officer at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1245148",
+    "date": "2026-11-01",
+    "timestamp": "2026-11-01T15:11:20.242119",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Katsina",
+      "category": "Healthcare"
+    }
   }
 }
