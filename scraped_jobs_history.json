@@ -2528,5 +2528,38 @@
       "location": "Katsina",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1245608": {
+    "title": "Nutrition Capacity Building Officer at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1245608",
+    "date": "2026-11-02",
+    "timestamp": "2026-11-02T18:05:58.286461",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Gwoza",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1245605": {
+    "title": "NUTRITION ASSISTANT at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1245605",
+    "date": "2026-11-02",
+    "timestamp": "2026-11-02T18:16:50.934042",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1245548": {
+    "title": "National Peace Building and Conflict Analysis Specialist at DRC - Danish Refugee Council",
+    "url": "https://www.impactpool.org/jobs/1245548",
+    "date": "2026-11-02",
+    "timestamp": "2026-11-02T18:44:05.184225",
+    "scraped_data": {
+      "company": "DRC - Danish Refugee Council",
+      "location": "Abuja",
+      "category": "Consultancy"
+    }
   }
 }
