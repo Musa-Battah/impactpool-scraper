@@ -2561,5 +2561,16 @@
       "location": "Abuja",
       "category": "Consultancy"
     }
+  },
+  "https://www.impactpool.org/jobs/1245656": {
+    "title": "Associate Designer at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1245656",
+    "date": "2026-11-03",
+    "timestamp": "2026-11-03T16:21:14.401285",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
   }
 }
