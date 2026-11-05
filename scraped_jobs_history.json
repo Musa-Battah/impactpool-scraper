@@ -2660,5 +2660,38 @@
       "location": "Lagos",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1246118": {
+    "title": "Batch recruitment (2 position): Finance Associate, G-6, TA (364 days), #139075, #139031 Abuja, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1246118",
+    "date": "2026-11-05",
+    "timestamp": "2026-11-05T17:45:59.985255",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1246243": {
+    "title": "Partner Enablement Team Coordinator at Peek Vision Limited",
+    "url": "https://www.impactpool.org/jobs/1246243",
+    "date": "2026-11-05",
+    "timestamp": "2026-11-05T18:04:38.422469",
+    "scraped_data": {
+      "company": "Peek Vision Limited",
+      "location": "India",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1246112": {
+    "title": "Nutrition Officer , NO-B, TA (364 days), #139030, Abuja -Nigeria, WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1246112",
+    "date": "2026-11-05",
+    "timestamp": "2026-11-05T18:32:08.857565",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Abuja",
+      "category": "Healthcare"
+    }
   }
 }
