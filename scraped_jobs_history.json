@@ -2693,5 +2693,27 @@
       "location": "Abuja",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1246364": {
+    "title": "National Data Consultant for ACCESS in Lagos Programme (DNEMIS Implementation Support), 12 months, Lagos, office-based + travel 596822 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1246364",
+    "date": "2026-11-06",
+    "timestamp": "2026-11-06T15:52:01.103568",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Lagos",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1246365": {
+    "title": "WASH Specialist, NO-3, TA (364 days), #138986,Kaduna, Nigeria- WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1246365",
+    "date": "2026-11-06",
+    "timestamp": "2026-11-06T16:13:46.547530",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kaduna",
+      "category": "Healthcare"
+    }
   }
 }
