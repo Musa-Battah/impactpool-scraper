@@ -2715,5 +2715,16 @@
       "location": "Kaduna",
       "category": "Healthcare"
     }
+  },
+  "https://www.impactpool.org/jobs/1246563": {
+    "title": "Field Cook at CTG - Committed To Good",
+    "url": "https://www.impactpool.org/jobs/1246563",
+    "date": "2026-11-07",
+    "timestamp": "2026-11-07T15:18:50.183264",
+    "scraped_data": {
+      "company": "CTG - Committed To Good",
+      "location": "Dikwa",
+      "category": "Technology"
+    }
   }
 }
