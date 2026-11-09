@@ -2726,5 +2726,27 @@
       "location": "Dikwa",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1246864": {
+    "title": "National Ecosystem Coordination Expert at UNIDO - United Nations Industrial Development Organization",
+    "url": "https://www.impactpool.org/jobs/1246864",
+    "date": "2026-11-09",
+    "timestamp": "2026-11-09T18:55:33.235412",
+    "scraped_data": {
+      "company": "UNIDO - United Nations Industrial Development Organization",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1246915": {
+    "title": "Information Management Officer, NO-2, TA (364 days), #00139078, Kano, Nigeria - WCAR at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1246915",
+    "date": "2026-11-09",
+    "timestamp": "2026-11-09T18:59:37.596114",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Kano",
+      "category": "Technology"
+    }
   }
 }
