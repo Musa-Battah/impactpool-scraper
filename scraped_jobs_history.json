@@ -2748,5 +2748,60 @@
       "location": "Kano",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1247502": {
+    "title": "Programme Manager (Immigration and Border Governance, Migration Governance, and Labour Mobility) (P) at IOM - International Organization for Migration",
+    "url": "https://www.impactpool.org/jobs/1247502",
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T16:23:55.192946",
+    "scraped_data": {
+      "company": "IOM - International Organization for Migration",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1246317": {
+    "title": "Pharmacy Technician - National Position at Malteser International",
+    "url": "https://www.impactpool.org/jobs/1246317",
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T16:26:17.318407",
+    "scraped_data": {
+      "company": "Malteser International",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1247163": {
+    "title": "MEAL Lead – RRISE Programme at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1247163",
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T16:31:01.391725",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1247376": {
+    "title": "Generalist Field Officer 2 (800567) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1247376",
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T16:52:07.584080",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Madagali",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1247201": {
+    "title": "Consultancy (International-only) for BMZ/KfW Joint Resilience and Social Cohesion Project, Phase II, Maiduguri, Nigeria (office based) 6 months #596910 at UNICEF - United Nations Children’s Fund",
+    "url": "https://www.impactpool.org/jobs/1247201",
+    "date": "2026-11-13",
+    "timestamp": "2026-11-13T16:58:15.150431",
+    "scraped_data": {
+      "company": "UNICEF - United Nations Children’s Fund",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
   }
 }
