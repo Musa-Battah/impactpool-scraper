@@ -2814,5 +2814,27 @@
       "location": "Maiduguri",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1248785": {
+    "title": "Medecin Consultant at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1248785",
+    "date": "2026-11-19",
+    "timestamp": "2026-11-19T17:37:58.347411",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Melfi",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1248791": {
+    "title": "Senior Project Manager at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1248791",
+    "date": "2026-11-19",
+    "timestamp": "2026-11-19T17:59:28.587056",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Maiduguri",
+      "category": "Technology"
+    }
   }
 }
