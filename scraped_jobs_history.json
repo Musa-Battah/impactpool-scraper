@@ -2836,5 +2836,27 @@
       "location": "Maiduguri",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1249068": {
+    "title": "Senior Project Integration Manager at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1249068",
+    "date": "2026-11-20",
+    "timestamp": "2026-11-20T17:15:30.295554",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1249065": {
+    "title": "Finance Lead – RRISE Program at IRC - International Rescue Committee",
+    "url": "https://www.impactpool.org/jobs/1249065",
+    "date": "2026-11-20",
+    "timestamp": "2026-11-20T17:40:04.559223",
+    "scraped_data": {
+      "company": "IRC - International Rescue Committee",
+      "location": "Abuja",
+      "category": "Technology"
+    }
   }
 }
