@@ -2869,5 +2869,38 @@
       "location": "Nigeria",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1249863": {
+    "title": "National Project Coordinator - NOA at ILO - International Labour Organization",
+    "url": "https://www.impactpool.org/jobs/1249863",
+    "date": "2026-11-25",
+    "timestamp": "2026-11-25T18:34:12.299566",
+    "scraped_data": {
+      "company": "ILO - International Labour Organization",
+      "location": "Abuja",
+      "category": "Management"
+    }
+  },
+  "https://www.impactpool.org/jobs/1249910": {
+    "title": "Programme Manager at CBM - Christian Blind Mission",
+    "url": "https://www.impactpool.org/jobs/1249910",
+    "date": "2026-11-25",
+    "timestamp": "2026-11-25T19:03:10.095267",
+    "scraped_data": {
+      "company": "CBM - Christian Blind Mission",
+      "location": "Nigeria",
+      "category": "Management"
+    }
+  },
+  "https://www.impactpool.org/jobs/1249928": {
+    "title": "External Relations & Resource Mobilization Officer at UNV - United Nations Volunteers",
+    "url": "https://www.impactpool.org/jobs/1249928",
+    "date": "2026-11-25",
+    "timestamp": "2026-11-25T19:10:59.731403",
+    "scraped_data": {
+      "company": "UNV - United Nations Volunteers",
+      "location": "Nigeria",
+      "category": "Technology"
+    }
   }
 }
