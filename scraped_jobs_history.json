@@ -3023,5 +3023,49 @@
       "location": "Damaturu",
       "category": "Technology"
     }
+  },
+  "https://www.impactpool.org/jobs/1250321": {
+    "title": "Psychologist 2 (800261) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1250321",
+    "date": "2026-11-27",
+    "timestamp": "2026-11-27T18:05:36.260143",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Sokoto",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1250318": {
+    "title": "First Aid and Prehospital Care Field Officer 2 (800656) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1250318",
+    "date": "2026-11-27",
+    "timestamp": "2026-11-27T18:19:12.276706",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Sokoto",
+      "category": "Technology"
+    }
+  },
+  "https://www.impactpool.org/jobs/1250319": {
+    "title": "Nutritionist 2 (800091) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1250319",
+    "date": "2026-11-27",
+    "timestamp": "2026-11-27T18:42:07.029271",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Maiduguri",
+      "category": "Healthcare"
+    }
+  },
+  "https://www.impactpool.org/jobs/1250320": {
+    "title": "Health Field Officer 2 (800264) at ICRC - International Committee of the Red Cross",
+    "url": "https://www.impactpool.org/jobs/1250320",
+    "date": "2026-11-27",
+    "timestamp": "2026-11-27T18:50:35.245625",
+    "scraped_data": {
+      "company": "ICRC - International Committee of the Red Cross",
+      "location": "Sokoto",
+      "category": "Healthcare"
+    }
   }
 }
